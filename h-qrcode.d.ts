@@ -8,6 +8,8 @@ declare module 'h-qrcode' {
         clear(): void;
 
         makeCode(text: string);
+
+        makeImage();
     }
 
     interface QRCodeConfig {
@@ -17,6 +19,11 @@ declare module 'h-qrcode' {
         colorDark?: string;
         colorLight?: string;
         correctLevel?: number;
+        typeNumber?: number;
+        isDotted?: boolean,
+        dotColors?: string[],
+        colorful?: boolean,
+        usePreset?: number,
     }
 
     interface CorrectLevel {
