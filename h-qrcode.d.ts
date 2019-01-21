@@ -12,6 +12,15 @@ declare module 'h-qrcode' {
         makeImage();
     }
 
+    const enum ColorPreset {
+        Zero = 0,
+        One,
+        Two,
+        Three,
+        Four,
+        Five,
+    }
+
     interface QRCodeConfig {
         text?: string;
         width?: number;
@@ -23,7 +32,7 @@ declare module 'h-qrcode' {
         isDotted?: boolean,
         dotColors?: string[],
         colorful?: boolean,
-        usePreset?: number,
+        usePreset?: ColorPreset,
     }
 
     interface CorrectLevel {
